@@ -1,12 +1,12 @@
-package org.ies.puerto;
+package ies.puerto.es;
 
 import java.util.Scanner;
 
 /**
- * @author Eduardo Gutiérrez
+ * @author Eduardo Gutierrez
  * @version 1.0.0
  */
-public class ahorro {
+public class Ahorro {
     static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -23,7 +23,7 @@ public class ahorro {
             scanner.nextLine();
         }
 
-        System.out.println("Hola, " + nombre +);
+        System.out.println("Hola, " + nombre);
         float totalAportado = 0.0f;
         int contadorAportacion = 0;
         String respuesta;
@@ -41,7 +41,7 @@ public class ahorro {
             contadorAportacion++;
             float ahorroActual = ahorroInicial + totalAportado;
             System.out.println("Aportacion registrada. Aportacion actual: " + ahorroActual + " euros");
-            System.out.println("¿Desea hacer otra aportacion? (S/N");
+            System.out.println("¿Desea hacer otra aportacion? (S/N)");
             respuesta = scanner.nextLine();
 
         } while (respuesta.equalsIgnoreCase("S"));
@@ -55,3 +55,4 @@ public class ahorro {
         System.out.println("Ahorro final: " + ahorroFinal + " euros");
 
     }
+}

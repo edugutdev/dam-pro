@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectId" id="3KmRwDHjbBu71TI6KxWmqSa6Ycs" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;/home/alumno/git/dam-pro/unidad-2&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Ahorro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ies.puerto.es.Ahorro" />
+      <module name="tarea-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ies.puerto.es.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Ahorro" />
+      </list>
+    </recent_temporary>
+  </component>
+</project>
