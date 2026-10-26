@@ -4,7 +4,7 @@ package ies.puerto.es;
  * @author edugutdev
  * @version 1.0.0
  */
-public class AnalizadorContraseña {
+public class AnalizadorContrasenia {
     public static void main() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduzca la cadena");
