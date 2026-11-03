@@ -1,5 +1,7 @@
 package ies.puerto.es;
 
+import java.util.Scanner;
+
 /**
  * @author edugutdev
  * @version 1.0.0
@@ -7,7 +9,10 @@ package ies.puerto.es;
 public class SumaDigitos {
 
     public static void main(String[] args) {
-
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce un número: ");
+        String numero = teclado.nextLine();
+        System.out.println("Suma de digitos: "+sumarDigitos(numero));
     }
 
     public static int sumarDigitos(String numero) {
