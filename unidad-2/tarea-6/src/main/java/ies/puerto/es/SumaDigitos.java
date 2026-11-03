@@ -6,23 +6,24 @@ package ies.puerto.es;
  */
 public class SumaDigitos {
 
-    /**
-     * Funcion que suma los digitos de un entero positivo indicado como texto
-     * @param numero String entero positivo
-     * @return int suma de los digitos
-     */
+    public static void main(String[] args) {
+
+    }
+
     public static int sumarDigitos(String numero) {
         if (numero == null || numero.isEmpty()) {
-            throw new IllegalArgumentException("El numero no puede ser null ni estar vacio");
+            throw new IllegalArgumentException("El texto no puede estar vacio");
+
         }
-        int resultado = 0;
+        int suma = 0;
         for (int i = 0; i < numero.length(); i++) {
-            char caracter = numero.charAt(i);
-            if (caracter < '0' || caracter > '9') {
-                throw new NumberFormatException("Caracter no valido: " + caracter);
+            char c = numero.charAt(i);
+            if (!Character.isDigit(c)) {
+                throw new NumberFormatException("El texto solo puede tener numeros");
+
             }
-            resultado = resultado + (caracter - '0');
+            suma += Character.getNumericValue(c);
         }
-        return resultado;
+        return suma;
     }
 }

@@ -1,24 +1,32 @@
 package ies.puerto.es;
 
+import java.util.Scanner;
+
 /**
  * @author edugutdev
  * @version 1.0.0
  */
 public class InvertirCadena {
 
-    /**
-     * Funcion que invierte todos los caracteres de un texto
-     * @param texto String texto original
-     * @return String texto invertido
-     */
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce el texto: ");
+        String texto = teclado.nextLine();
+        System.out.println("Texto invertido: "+invertir(texto));
+    }
+
     public static String invertir(String texto) {
         if (texto == null) {
-            throw new IllegalArgumentException("El texto no puede ser null");
+            throw new IllegalArgumentException("El texto no puede ser nulo");
         }
-        String invertido = "";
-        for (int i = texto.length() - 1; i >= 0; i--) {
-            invertido = invertido + texto.charAt(i);
+        char[] caracter = texto.toCharArray();
+        char[] invertido = new char[caracter.length];
+        for (int i = 0; i < caracter.length; i++) {
+            invertido [i] = caracter[caracter.length-1-i];
+
         }
-        return invertido;
+        return new String(invertido);
+
     }
+
 }

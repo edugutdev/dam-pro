@@ -1,31 +1,33 @@
 package ies.puerto.es;
 
+import java.util.Scanner;
+
 /**
  * @author edugutdev
  * @version 1.0.0
  */
 public class ContadorVocales {
 
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce el texto: ");
+        String texto = teclado.nextLine();
+        System.out.println("Vocales: "+contarVocales(texto));
+    }
 
-    private static final String VOCALES = "aeiou\u00e1\u00e9\u00ed\u00f3\u00fa\u00fc";
-
-    /**
-     * Funcion que cuenta las vocales de un texto
-     * @param texto String texto donde se cuentan las vocales
-     * @return int numero de vocales
-     */
     public static int contarVocales(String texto) {
-        if (texto == null) {
-            throw new IllegalArgumentException("El texto no puede ser null");
-        }
-        int resultado = 0;
-        texto = texto.toLowerCase();
+    if (texto == null) {
+        throw new IllegalArgumentException("El texto no puede ser nulo");
+
+    }
+    String permitidas = "aeiouáéíóúüAEIOUÁÉÍÓÚÜ";
+    int contador = 0;
         for (int i = 0; i < texto.length(); i++) {
-            char caracter = texto.charAt(i);
-            if (VOCALES.indexOf(caracter) >= 0) {
-                resultado = resultado + 1;
+            char c = texto.charAt(i);
+            if (permitidas.indexOf(c) != -1) {
+                contador++;
             }
         }
-        return resultado;
+        return contador;
     }
 }
