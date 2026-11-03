@@ -1,5 +1,7 @@
 package ies.puerto.es;
 
+import java.util.Scanner;
+
 /**
  * @author edugutdev
  * @version 1.0.0
@@ -30,7 +32,11 @@ public class GestorCalificaciones {
         System.out.println("El valor maximo es: "+maximo);
     }
 
-
+    /**
+     * Funcion
+     * @param sNumero
+     * @return
+     */
     static int convertirNumeroNota(String sNumero) {
         int numero = 0;
         if(sNumero == null || sNumero.isEmpty()) {
