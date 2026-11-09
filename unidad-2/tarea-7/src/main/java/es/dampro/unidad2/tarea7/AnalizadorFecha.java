@@ -10,14 +10,14 @@ import java.util.Objects;
 public final class AnalizadorFecha {
 
 
-    private static final String SEPARADOR = "|";
+    private static final String separador = "|";
 
     public static String analizarFecha(LocalDate fecha) {
         Objects.requireNonNull(fecha, "La fecha no puede ser null");
         return fecha
-                + SEPARADOR + fecha.getDayOfWeek()
-                + SEPARADOR + fecha.getDayOfYear()
-                + SEPARADOR + fecha.isLeapYear()
-                + SEPARADOR + fecha.lengthOfMonth();
+                + separador + fecha.getDayOfWeek()
+                + separador + fecha.getDayOfYear()
+                + separador + fecha.isLeapYear()
+                + separador + fecha.lengthOfMonth();
     }
 }
