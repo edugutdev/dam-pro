@@ -1,13 +1,25 @@
 package es.educacion.arrays;
 
-// Devuelve el índice de la primera aparición o -1. No requiere ordenar. Null: IllegalArgumentException.
-// 
-// TODO: implementar el método y documentar la clase y el método mediante Javadoc.
+/**
+ * @author edugutdev
+ * @version 1.0.0
+ */
 public final class Ejercicio05Buscar {
     private Ejercicio05Buscar() { }
 
-    // Devuelve el índice de la primera aparición o -1. No requiere ordenar. Null: IllegalArgumentException.
+    // |8|3|5|6|
+    // |0|1|2|3|
+
     public static int buscar(int[] numeros, int objetivo) {
-        throw new UnsupportedOperationException("Pendiente de implementar");
+        if (numeros == null || numeros.length == 0) {
+            throw new IllegalArgumentException();
+        }
+        for (int i = 0; i < numeros.length; i++) {
+            int numero = numeros[i];
+            if (numero == objetivo) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
