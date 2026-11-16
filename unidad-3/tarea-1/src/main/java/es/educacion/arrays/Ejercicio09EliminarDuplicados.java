@@ -12,7 +12,7 @@ public final class Ejercicio09EliminarDuplicados {
     public static void main(String[] args) {
         int[] numeros = {3, 1, 3, 2, 1, 3};
         int[] resultado = eliminarDuplicados(numeros);
-        System.out.println("Sin duplicados = " + Arrays.toString(resultado));
+        System.out.println("Eliminar duplicados = " + Arrays.toString(resultado));
     }
 
  
@@ -20,21 +20,21 @@ public final class Ejercicio09EliminarDuplicados {
         if (numeros == null) {
             throw new IllegalArgumentException("El Array es nulo");
         }
-        int[] sinDuplicados = new int[numeros.length];
+        int[] eliminarDuplicados = new int[numeros.length];
         int total = 0;
         for (int numero : numeros) {
             boolean yaExiste = false;
             for (int i = 0; i < total; i++) {
-                if (sinDuplicados[i] == numero) {
+                if (eliminarDuplicados[i] == numero) {
                     yaExiste = true;
                     break;
                 }
             }
             if (!yaExiste) {
-                sinDuplicados[total] = numero;
+                eliminarDuplicados[total] = numero;
                 total++;
             }
         }
-        return Arrays.copyOf(sinDuplicados, total);
+        return Arrays.copyOf(eliminarDuplicados, total);
     }
 }
