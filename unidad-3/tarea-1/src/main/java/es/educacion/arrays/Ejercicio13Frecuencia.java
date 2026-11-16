@@ -13,6 +13,12 @@ public final class Ejercicio13Frecuencia {
         System.out.println("El 4 aparece "+frecuencia+" veces");
     }
 
+    /**
+     * Funcion que cuenta cuantas veces aparece un numero
+     * @param numeros int[] de enteros
+     * @param objetivo valor que se busca
+     * @return int con numero de apariciones
+     */
     public static int frecuencia(int[] numeros, int objetivo) {
         if (numeros == null) {
             throw new IllegalArgumentException();
