@@ -13,6 +13,11 @@ public final class Ejercicio11ContarPares {
         System.out.println("Numero de pares = "+pares);
     }
 
+    /**
+     * Funcion que cuenta valores divisibles entre dos
+     * @param numeros int de enteros
+     * @return int de la cantidad de valores pares
+     */
     public static int contarPares(int[] numeros) {
         if (numeros == null) {
             throw new IllegalArgumentException();
